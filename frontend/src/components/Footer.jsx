@@ -6,17 +6,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Ana Sayfa', path: '/' },
-    { name: 'Takımımız', path: '/takim' },
-    { name: 'Araçlarımız', path: '/araclar' },
-    { name: 'Başarılarımız', path: '/basarilar' }
+    { name: 'Home Page', path: '/' },
+    { name: 'Our Team', path: '/takim' },
+    { name: 'Our Vehicles', path: '/araclar' },
+    { name: 'Our Achievements', path: '/basarilar' }
   ];
 
   const resources = [
     { name: 'Blog', path: '/blog' },
-    { name: 'Galeri', path: '/galeri' },
-    { name: 'Sponsorlar', path: '/sponsorlar' },
-    { name: 'İletişim', path: '/iletisim' }
+    { name: 'Gallery', path: '/galeri' },
+    { name: 'Sponsors', path: '/sponsorlar' },
+    { name: 'Contact', path: '/iletisim' }
   ];
 
   return (
@@ -26,14 +26,13 @@ const Footer = () => {
           {/* About Section */}
           <div className="col-span-2">
             <Link to="/" className="text-2xl font-bold text-white mb-4 block">
-              İTÜNOM UAV TEAM
+              ITUNOM UAV TEAM
             </Link>
             <p className="text-gray-400 mb-4">
               Istanbul Technical University Unmanned Aerial Vehicles Team
             </p>
             <p className="text-gray-400 text-sm">
-              2014 yılından beri insansız hava araçları teknolojileri üzerine 
-              çalışan öğrenci topluluğu.
+              Since 2014, a student community working on unmanned aerial vehicle technologies.
             </p>
           </div>
 

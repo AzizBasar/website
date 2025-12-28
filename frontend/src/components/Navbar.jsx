@@ -8,7 +8,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: 'ANA SAYFA', path: '/' },
-    { name: 'GALERİ', path: '/galeri' },
+    { name: 'BLOG', path: '/blog' },
     { name: 'ARAÇLARIMIZ', path: '/araclar' },
     { name: 'TAKIMIMIZ', path: '/takim' },
     { name: 'BAŞARILARIMIZ', path: '/basarilar' },
@@ -76,7 +76,7 @@ const Navbar = () => {
               </Link>
             ))}
             <button className="w-full mt-4 px-4 py-2 bg-red-600 text-white text-sm font-semibold rounded-md hover:bg-red-700 transition-colors duration-200">
-              TR
+
             </button>
           </div>
         </div>

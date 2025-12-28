@@ -47,7 +47,7 @@ const HomePage = () => {
         {/* Hero Content */}
         <div className="relative z-10 max-w-5xl mx-auto px-4 text-center">
           <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
-            İTÜNOM<br />UAV TEAM
+            ITUNOM<br />UAV TEAM
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
             ITUNOM Unmanned Aerial Vehicles Team
@@ -81,11 +81,10 @@ const HomePage = () => {
           <div className="w-24 h-1 bg-red-600 mx-auto mb-12"></div>
           
           <p className="text-lg text-gray-300 text-center max-w-4xl mx-auto leading-relaxed mb-8">
-            2014 yılında lisans öğrencileri tarafından kurulan İTÜNOM İnsansız Hava Araçları Takımı, 
-            gücünü İstanbul Teknik Üniversitesi'nin köklü mühendislik kültüründen alır. Misyonumuzun 
-            merkezinde sadece insansız hava araçları üretmekten fazlası yatar; Türkiye'nin stratejik 
-            bilimsel ve teknolojik gelişim hedefleri doğrultusunda nitelikli, vizyoner ve üretken 
-            mühendisler yetiştirmeye adanmışız.
+            Founded in 2014 by undergraduate students, the ITUNOM Unmanned Aerial Vehicles Team
+            draws its strength from Istanbul Technical University's long-standing engineering culture.
+            At the heart of our mission lies more than just producing unmanned aerial vehicles; we are dedicated to training qualified, visionary, 
+            and productive engineers in line with Turkey's strategic scientific and technological development goals.
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 mt-16">
@@ -95,10 +94,10 @@ const HomePage = () => {
                 alt="About Team"
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
-              <h3 className="text-2xl font-bold text-white mb-4">Vizyonumuz</h3>
+              <h3 className="text-2xl font-bold text-white mb-4"> Our Vision</h3>
               <p className="text-gray-300 leading-relaxed">
-                Otonom sistemler ve yenilikçi yazılım çözümleri geliştirerek ülkemizi en prestijli 
-                ulusal ve uluslararası yarışmalarda gururla temsil ediyoruz.
+              By developing autonomous systems and innovative software solutions, 
+              we proudly represent our country in the most prestigious national and international competitions.
               </p>
             </div>
 
@@ -108,10 +107,10 @@ const HomePage = () => {
                 alt="Workshop"
                 className="w-full h-64 object-cover rounded-lg mb-6"
               />
-              <h3 className="text-2xl font-bold text-white mb-4">Çalışma Alanımız</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Our Mission</h3>
               <p className="text-gray-300 leading-relaxed">
-                Takımımız disiplinler arası bir Ar-Ge laboratuvarı olarak işlev görür, teorik bilgiyi 
-                sahada test edilmiş pratik deneyime dönüştürür.
+                Our team functions as an interdisciplinary R&D laboratory, transforming theoretical knowledge 
+                into practical experience tested in the field.
               </p>
             </div>
           </div>
@@ -143,17 +142,17 @@ const HomePage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Takımımıza Katılın
+            Join Our Team
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            İTÜNOM ile havacılık teknolojilerinin geleceğini şekillendirin. 
-            Otonom sistemler, yapay zeka ve drone teknolojileri üzerine çalışın.
+            Shape the future of aviation technologies with ITUNOM. 
+            Work on autonomous systems, artificial intelligence, and drone technologies.
           </p>
           <Link
             to="/contact"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-white text-black font-semibold rounded-lg hover:bg-gray-200 transition-all duration-300 shadow-lg hover:scale-105"
           >
-            <span>İletişime Geçin</span>
+            <span>Contact Us</span>
             <ArrowRight size={20} />
           </Link>
         </div>
