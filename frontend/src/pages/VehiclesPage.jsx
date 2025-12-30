@@ -1,30 +1,32 @@
 import React from 'react';
 import { ArrowRight, Cpu, Radio, Camera, Battery, Ruler, Weight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const VehiclesPage = () => {
-  // TODO: Bu bölümü gerçek araçlarınızın bilgileriyle güncelleyin
+  const { t } = useTranslation();
+  // TODO: Update this section with your real vehicles' information
   const currentVehicle = {
-    name: 'ŞİMŞEK',
-    year: '2024',
-    competition: 'RoboNation SUAS 2024',
-    description: 'SUAS 2024 yarışması için geliştirilmiş tam otonom İHA sistemi. Gelişmiş görüntü işleme ve yapay zeka algoritması ile hedef tespit ve tanıma yeteneklerine sahiptir.',
-    image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1200&q=80',
+    name: 'VIBE',
+    year: '2025',
+    competition: 'RoboNation SUAS 2025',
+    description: t('vehicles.description'),
+    image: '/photos/vehicles/tetikorti.jpg',
     specs: [
-      { icon: <Ruler size={20} />, label: 'Açıklık', value: '2.8 m' },
-      { icon: <Weight size={20} />, label: 'Ağırlık', value: '12 kg' },
-      { icon: <Battery size={20} />, label: 'Uçuş Süresi', value: '45 dk' },
-      { icon: <Camera size={20} />, label: 'Kamera', value: '4K Gimbal' },
-      { icon: <Radio size={20} />, label: 'Menzil', value: '5 km' },
-      { icon: <Cpu size={20} />, label: 'İşlemci', value: 'Jetson Xavier NX' }
+      { icon: <Ruler size={20} />, label: 'Wingspan', value: '2.8 m' },
+      { icon: <Weight size={20} />, label: 'Weight', value: '15 kg' },
+      { icon: <Battery size={20} />, label: 'Flight Time', value: '34 min' },
+      { icon: <Camera size={20} />, label: 'Camera', value: '4K Gimbal' },
+      { icon: <Radio size={20} />, label: 'Range', value: '20 km' },
+      { icon: <Cpu size={20} />, label: 'Processor', value: 'Jetson Orin Nano' }
     ],
     features: [
-      'Tam otonom uçuş kontrol sistemi',
-      'Gelişmiş hedef tespit ve tanıma (YOLOv8)',
-      'GPS ve görsel odometri hibrit navigasyon',
-      'Gerçek zamanlı telemetri sistemi',
-      'Otomatik iniş ve kalkış',
-      'Çoklu failsafe sistemleri'
+      'Fully autonomous flight control system',
+      'Advanced object detection and recognition (YOLOv8)',
+      'GPS and visual odometry hybrid navigation',
+      'Real-time telemetry system',
+      'Automatic takeoff and landing',
+      'Multiple failsafe mechanisms'
     ]
   };
 
@@ -32,44 +34,51 @@ const VehiclesPage = () => {
     {
       name: 'DİŞSİZ',
       year: '2024',
-      competition: 'Teknofest Savaş İHA',
-      image: 'https://images.unsplash.com/photo-1569144157596-33f2b5ab0a87?w=800&q=80',
-      description: 'Teknofest 2024 Savaş İHA kategorisi için geliştirilen yüksek manevra kabiliyetine sahip platform.'
+      competition: 'Teknofest Combat UAV',
+      image: '/photos/vehicles/dissizkucuk.jpg',
+      description: 'High-maneuverability platform developed for the Teknofest 2024 Combat UAV category.'
+    },
+    {
+      name: 'ŞİMŞEK',
+      year: '2023',
+      competition: 'RoboNation SUAS 2024',
+      image: '/photos/vehicles/simseknew.jpg',
+      description: 'Autonomous UAV system developed for SUAS 2024.'
     },
     {
       name: 'TOSUN',
       year: '2022',
       competition: 'AUVSI SUAS 2022',
-      image: 'https://images.unsplash.com/photo-1508450859948-4e04fabaa4ea?w=800&q=80',
-      description: 'SUAS 2022 yarışmasında 3. sırayı elde eden yüksek performanslı İHA sistemi.'
+      image: '/photos/vehicles/tosunson.jpg',
+      description: 'High-performance UAV system that achieved 3rd place in the SUAS 2022 competition.'
     },
     {
       name: 'KV-55',
       year: '2021',
       competition: 'Teknofest 2021',
-      image: 'https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=800&q=80',
-      description: 'Teknofest 2021 yarışmasında 3. sıra elde eden kompakt ve çevik tasarım.'
+      image: '/photos/vehicles/kv55website.png  ',
+      description: 'Compact and agile design that secured 3rd place in Teknofest 2021.'
     },
     {
       name: 'BLACKSPARROW',
       year: '2020',
       competition: 'SUAS 2020',
-      image: 'https://images.unsplash.com/photo-1507808973436-a4ed7b5e87c9?w=800&q=80',
-      description: 'Yenilikçi karbon fiber gövde yapısı ve gelişmiş aviyoniklerle donatılmış platform.'
+      image: '/photos/vehicles/blacksparrowwebsite.png',
+      description: 'Platform featuring an innovative carbon fiber airframe and advanced avionics.'
     },
     {
       name: 'GOLDENHORN',
       year: '2018',
       competition: 'AUVSI SUAS 2018',
-      image: 'https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80',
-      description: 'Yüksek verimli kanat profili ve modular tasarımıyla öne çıkan sistem.'
+      image: '/photos/vehicles/goldenhornwebsite.png',
+      description: 'System distinguished by its high-efficiency wing profile and modular design.'
     },
     {
       name: 'LODOS',
       year: '2017',
       competition: 'AUVSI SUAS 2017',
-      image: 'https://images.unsplash.com/photo-1562813733-b31f71025d54?w=800&q=80',
-      description: 'SUAS 2017 yarışmasında 4. sıra elde eden istikrarlı ve güvenilir platform.'
+      image: '/photos/vehicles/lodoswebsite.png',
+      description: 'Stable and reliable platform that achieved 4th place in SUAS 2017.'
     }
   ];
 
@@ -79,12 +88,11 @@ const VehiclesPage = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            ARAÇLARIMIZ
+            {t('vehicles.title')}
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Yıllar içinde geliştirdiğimiz İHA sistemleri, mühendislik mükemmelliği ve 
-            yenilikçi çözümlerin bir yansımasıdır.
+            {t('vehicles.description')}
           </p>
         </div>
       </section>
@@ -94,11 +102,10 @@ const VehiclesPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Mevcut Araç: {currentVehicle.name}
+              {t('vehicles.current')}: {currentVehicle.name}
             </h2>
             <p className="text-red-500 text-lg">{currentVehicle.competition}</p>
             <p className="text-gray-400 mt-2">
-              NOT: Bu bölümü SUAS 2026 araç bilgilerinizle güncelleyin
             </p>
           </div>
 
@@ -117,7 +124,7 @@ const VehiclesPage = () => {
               </p>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Teknik Özellikler</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{t('vehicles.specs')}</h3>
                 <div className="grid grid-cols-2 gap-4">
                   {currentVehicle.specs.map((spec, index) => (
                     <div
@@ -135,7 +142,7 @@ const VehiclesPage = () => {
               </div>
 
               <div>
-                <h3 className="text-2xl font-bold text-white mb-4">Özellikler</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">{t('vehicles.features')}</h3>
                 <ul className="space-y-2">
                   {currentVehicle.features.map((feature, index) => (
                     <li key={index} className="flex items-start space-x-2 text-gray-300">
@@ -153,7 +160,7 @@ const VehiclesPage = () => {
               to="/blog"
               className="inline-flex items-center space-x-2 px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-500/50"
             >
-              <span>Geliştirme Sürecini İnceleyin</span>
+              <span>{t('vehicles.viewProcess')}</span>
               <ArrowRight size={20} />
             </Link>
           </div>
@@ -164,11 +171,9 @@ const VehiclesPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-4">
-            Geçmiş Araçlarımız
+            {t('vehicles.past')}
           </h2>
-          <p className="text-center text-gray-400 mb-12">
-            NOT: Bu bölümü gerçek geçmiş araçlarınızın bilgileriyle güncelleyin
-          </p>
+      
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {pastVehicles.map((vehicle, index) => (
@@ -192,6 +197,9 @@ const VehiclesPage = () => {
                 <div className="p-6">
                   <p className="text-gray-400 text-sm mb-3">{vehicle.competition}</p>
                   <p className="text-gray-300 text-sm">{vehicle.description}</p>
+                  <button className="mt-4 inline-flex items-center text-red-500 hover:text-red-400 transition-colors font-semibold text-sm">
+                    {t('vehicles.viewProcess')} <ArrowRight size={16} className="ml-2" />
+                  </button>
                 </div>
               </div>
             ))}
@@ -203,7 +211,7 @@ const VehiclesPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Tasarım Felsefemiz
+            {t('vehicles.philosophy')}
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -211,9 +219,9 @@ const VehiclesPage = () => {
               <div className="inline-block p-4 bg-red-600/20 rounded-full mb-4">
                 <Cpu size={48} className="text-red-500" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Otonom Sistemler</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{t('vehicles.philosophyItems.autonomous.title')}</h3>
               <p className="text-gray-300">
-                Yapay zeka ve makine öğrenimi algoritması kullanarak tam otonom uçuş ve görev yetenekleri.
+                {t('vehicles.philosophyItems.autonomous.description')}
               </p>
             </div>
 
@@ -221,9 +229,9 @@ const VehiclesPage = () => {
               <div className="inline-block p-4 bg-red-600/20 rounded-full mb-4">
                 <Camera size={48} className="text-red-500" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Görüntü İşleme</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{t('vehicles.philosophyItems.vision.title')}</h3>
               <p className="text-gray-300">
-                Gelişmiş görüntü işleme teknikleriyle hedef tespit, takip ve tanıma sistemleri.
+                {t('vehicles.philosophyItems.vision.description')}
               </p>
             </div>
 
@@ -231,9 +239,9 @@ const VehiclesPage = () => {
               <div className="inline-block p-4 bg-red-600/20 rounded-full mb-4">
                 <Radio size={48} className="text-red-500" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">Güvenilirlik</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{t('vehicles.philosophyItems.reliability.title')}</h3>
               <p className="text-gray-300">
-                Çoklu failsafe sistemleri ve sıkı test süreçleriyle yüksek güvenilirlik sağlıyoruz.
+                {t('vehicles.philosophyItems.reliability.description')}
               </p>
             </div>
           </div>

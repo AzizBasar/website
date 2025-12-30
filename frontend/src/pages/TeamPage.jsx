@@ -1,71 +1,54 @@
 import React from 'react';
 import { Mail, Linkedin, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const TeamPage = () => {
-  // TODO: Burayı gerçek takım üyelerinizle doldurun
+  const { t } = useTranslation();
+  // TODO: Fill this section with your real team members
   const teamMembers = [
     {
-      name: 'Ahmet Yılmaz',
-      role: 'Takım Kaptanı',
-      department: 'Uçak Mühendisliği',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80',
-      email: 'ahmet@itu.edu.tr',
+      name: 'Burak  Emir Cengiz',
+      role: 'Team Captain',
+      image: '/photos/team/burak.jpg',
+      email: 'burak24@itu.edu.tr',
       linkedin: '#'
     },
     {
-      name: 'Elif Demir',
-      role: 'Yazılım Ekip Lideri',
-      department: 'Bilgisayar Mühendisliği',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80',
-      email: 'elif@itu.edu.tr',
+      name: 'Aziz Başar',
+      role: 'Software Team Leader',
+      image: '/photos/team/jr.png',
+      email: 'basara23@itu.edu.tr',
       linkedin: '#'
     },
     {
-      name: 'Mehmet Kaya',
-      role: 'Mekanik Tasarım Lideri',
-      department: 'Makina Mühendisliği',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
-      email: 'mehmet@itu.edu.tr',
+      name: 'Eren Dölen',
+      role: 'Mechanical Team Leader',
+      image: '/photos/team/input.jpg',
+      email: 'eren@itu.edu.tr',
       linkedin: '#'
     },
     {
-      name: 'Zeynep Arslan',
-      role: 'Elektronik Ekip Lideri',
-      department: 'Elektrik-Elektronik Mühendisliği',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80',
-      email: 'zeynep@itu.edu.tr',
+      name: 'Recep Sedat Tokay',
+      role: 'Aviyonic Team Leader',
+      image: '/photos/team/reco.jpg',
+      email: 'recep@itu.edu.tr',
       linkedin: '#'
     },
     {
-      name: 'Can Özdemir',
-      role: 'Otonom Sistemler',
-      department: 'Kontrol Mühendisliği',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&q=80',
+      name: 'Asu İrem Güllüoğlu',
+      role: 'Promotion & Sponsorship Team Leader',
+      image: '/photos/team/asu.jpg',
       email: 'can@itu.edu.tr',
-      linkedin: '#'
-    },
-    {
-      name: 'Ayşe Yıldız',
-      role: 'Görüntü İşleme',
-      department: 'Bilgisayar Mühendisliği',
-      image: 'https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=400&q=80',
-      email: 'ayse@itu.edu.tr',
       linkedin: '#'
     }
   ];
 
   const advisors = [
     {
-      name: 'Prof. Dr. Ali Veli',
-      role: 'Akademik Danışman',
-      department: 'Uçak ve Uzay Mühendisliği Fakültesi',
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&q=80'
-    },
-    {
-      name: 'Doç. Dr. Fatma Nur',
-      role: 'Teknik Danışman',
-      department: 'Elektrik-Elektronik Mühendisliği Fakültesi',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80'
+      name: 'Prof. Dr. Emre Koyuncu',
+      role: 'Academic Advisor',
+      department: 'Faculty of Aeronautics and Astronautics',
+      image: '/photos/team/koyuncu.jpeg'
     }
   ];
 
@@ -75,12 +58,11 @@ const TeamPage = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            TAKIMIMIZ
+            {t('team.title')}
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            İTÜNOM, farklı mühendislik disiplinlerinden gelen yetenekli öğrencilerin bir araya gelerek 
-            dünya standartlarında İHA sistemleri geliştirdiği bir ekiptir.
+            {t('team.description')}
           </p>
         </div>
       </section>
@@ -89,11 +71,9 @@ const TeamPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-4">
-            Ekip Liderleri
+            {t('team.leaders')}
           </h2>
-          <p className="text-center text-gray-400 mb-12">
-            NOT: Bu bölümü gerçek takım üyelerinizin bilgileriyle güncelleyin
-          </p>
+         <div></div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
@@ -141,14 +121,11 @@ const TeamPage = () => {
       </section>
 
       {/* Advisors Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
+      <section className="py-20 px-40 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-4">
-            Danışmanlarımız
+            {t('team.advisors')}
           </h2>
-          <p className="text-center text-gray-400 mb-12">
-            NOT: Bu bölümü gerçek danışmanlarınızın bilgileriyle güncelleyin
-          </p>
           
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {advisors.map((advisor, index) => (
@@ -178,18 +155,17 @@ const TeamPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Takımımıza Katılmak İster misiniz?
+            {t('team.join.title')}
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            İTÜ öğrencisiyseniz ve havacılık teknolojileriyle ilgileniyorsanız, 
-            aramıza katılabilirsiniz. Her dönem yeni üye alımları yapıyoruz.
+            {t('team.join.description')}
           </p>
           <a
-            href="mailto:iha@itu.edu.tr"
+            href="mailto:itunomuavteam@itu.edu.tr"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-500/50"
           >
             <Mail size={20} />
-            <span>Başvuru İçin İletişime Geçin</span>
+            <span>{t('team.join.button')}</span>
           </a>
         </div>
       </section>

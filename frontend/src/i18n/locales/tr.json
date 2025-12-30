@@ -7,24 +7,28 @@
     "achievements": "BAŞARILARIMIZ",
     "sponsors": "SPONSORLAR",
     "contact": "İLETİŞİM",
-    "blog": "BLOG"
+    "blog": "BLOG",
+    "join_us": "BİZE KATILIN"
+  },
+  "search": {
+    "placeholder": "Bir komut yazın veya arayın..."
   },
   "home": {
     "hero": {
-      "title": "İTÜNOM UAV TEAM",
-      "subtitle": "ITUNOM Unmanned Aerial Vehicles Team",
-      "university": "Istanbul Technical University",
-      "cta": "SUAS 2026"
+      "title": "İTÜNOM İHA TAKIMI",
+      "subtitle": "ITUNOM İnsansız Hava Araçları Takımı",
+      "university": "İstanbul Teknik Üniversitesi",
+      "cta": "SUAS 2025"
     },
     "about": {
-      "title": "Engineering the Future of Aviation",
+      "title": "Havacılık Teknolojilerinin Geleceğini Şekillendiriyoruz",
       "description": "2014 yılından beri lisans öğrencileri tarafından kurulan İTÜNOM İnsansız Hava Araçları Takımı, gücünü İstanbul Teknik Üniversitesi'nin köklü mühendislik kültüründen alır. Misyonumuzun merkezinde sadece insansız hava araçları üretmekten fazlası yatar; Türkiye'nin stratejik bilimsel ve teknolojik gelişim hedefleri doğrultusunda nitelikli, vizyoner ve üretken mühendisler yetiştirmeye adanmışız.",
       "vision": {
         "title": "Vizyonumuz",
         "text": "Otonom sistemler ve yenilikçi yazılım çözümleri geliştirerek ülkemizi en prestijli ulusal ve uluslararası yarışmalarda gururla temsil ediyoruz."
       },
       "workspace": {
-        "title": "Çalışma Alanımız",
+        "title": "Misyonumuz",
         "text": "Takımımız disiplinler arası bir Ar-Ge laboratuvarı olarak işlev görür, teorik bilgiyi sahada test edilmiş pratik deneyime dönüştürür."
       }
     },
@@ -54,7 +58,7 @@
   },
   "gallery": {
     "title": "GALERİ",
-    "description": "Ekibimizin fotoğraf ve videolarına aşağıdaki düğmeler üzerinden ulaşabilirsiniz. Ekibimize ait medya ve galeri arşivini {email} adresine e-posta göndererek talep edebilirsiniz.",
+    "description": "Ekibimizin fotoğraf ve videolarına aşağıdaki düğmeler üzerinden ulaşabilirsiniz. Ekibimize ait medya ve galeri arşivini <0>iha@itu.edu.tr</0> adresine e-posta göndererek talep edebilirsiniz.",
     "photos": "Fotoğraflar",
     "videos": "Videolar",
     "categories": {
@@ -72,13 +76,30 @@
       "electronics": "Elektronik",
       "autonomousSystems": "Otonom Sistemler",
       "ai": "Yapay Zeka"
+    },
+    "items": {
+      "photo_1": { "title": "ŞİMŞEK İHA Test Uçuşu", "desc": "SUAS 2024 yarışması için geliştirdiğimiz Şimşek İHA'nın test uçuşu. Otonom görev yetenekleri başarıyla test edildi." },
+      "photo_2": { "title": "SUAS 2023 Şampiyonluk", "desc": "ABD'de düzenlenen SUAS 2023 yarışmasında şampiyonluk kupamız ve takım fotoğrafımız." },
+      "photo_3": { "title": "Teknofest 2024 Derecemiz", "desc": "Teknofest İnsansız Hava Araçları yarışmasında 3. olmanın gururunu yaşadık." },
+      "photo_4": { "title": "Atölye Çalışmaları", "desc": "Takım üyelerimizin İTÜ atölyesinde İHA üretim ve montaj çalışmaları." },
+      "photo_5": { "title": "Otonom Görev Testi", "desc": "Şimşek İHA'nın otonom navigasyon ve hedef tespit sistemlerinin saha testi." },
+      "photo_6": { "title": "Tanıtım Toplantısı", "desc": "Yeni dönem tanıtım toplantımızdan kareler. Aramıza katılan yeni arkadaşlarımızla bir araya geldik." },
+      "photo_7": { "title": "DİŞSİZ Savaş İHA'sı", "desc": "Teknofest 2024 Savaş İHA kategorisi için geliştirdiğimiz Dişsiz projesi." },
+      "photo_8": { "title": "TOSUN İHA Lansmanı", "desc": "SUAS 2022 için geliştirdiğimiz TOSUN İHA'nın tanıtımı ve ilk uçuş anları." },
+      "photo_9": { "title": "Sponsorlarımızla Buluşma", "desc": "Projelerimize destek veren sponsorlarımızla düzenlediğimiz toplantı." },
+      "video_1": { "title": "SUAS 2023 Şampiyonluk Hikayemiz", "desc": "Amerika'da düzenlenen SUAS 2023 yarışmasında şampiyonluğa uzanan yolculuğumuz." },
+      "video_2": { "title": "ŞİMŞEK İHA Tanıtımı", "desc": "SUAS 2024 için geliştirdiğimiz Şimşek İHA'nın teknik özellikleri ve yetenekleri." },
+      "video_3": { "title": "Teknofest 2024 Yarışma Anları", "desc": "Teknofest İnsansız Hava Araçları yarışmasında sergilediğimiz performans." },
+      "video_4": { "title": "Atölye Günlükleri - Bölüm 1", "desc": "Takım üyelerimizin atölyede İHA üretim sürecini anlattığı video serisi." },
+      "video_5": { "title": "Otonom Uçuş Sistemi Testi", "desc": "Geliştirdiğimiz otonom uçuş kontrolü ve hedef tespit sistemlerinin test videosu." },
+      "video_6": { "title": "Takım Tanıtım Videosu 2024", "desc": "İTÜNOM UAV Team'in 2024 yılı tanıtım videosu ve ekip üyelerimiz." }
     }
   },
   "team": {
     "title": "TAKIMIMIZ",
     "description": "İTÜNOM, farklı mühendislik disiplinlerinden gelen yetenekli öğrencilerin bir araya gelerek dünya standartlarında İHA sistemleri geliştirdiği bir ekiptir.",
     "leaders": "Ekip Liderleri",
-    "advisors": "Danışmanlarımız",
+    "advisors": "Danışmanımız",
     "note": "NOT: Bu bölümü gerçek takım üyelerinizin bilgileriyle güncelleyin",
     "join": {
       "title": "Takımımıza Katılmak İster misiniz?",
@@ -94,6 +115,16 @@
     "teknofest": "Teknofest Competitions",
     "teknofestDesc": "İnsansız Hava Araçları Yarışması",
     "highlights": "Öne Çıkan Başarılar",
+    "highlight1": {
+      "title": "SUAS 2023",
+      "subtitle": "Şampiyonluk",
+      "description": "ABD'de düzenlenen SUAS 2023 yarışmasında kazandığımız şampiyonluk, takımımızın uluslararası arenadaki gücünü kanıtladı."
+    },
+    "highlight2": {
+      "title": "Teknofest 2019",
+      "subtitle": "Birincilik",
+      "description": "Türkiye'nin en büyük teknoloji festivali Teknofest'te elde ettiğimiz birincilik, ulusal düzeyde öncü olduğumuzu gösterdi."
+    },
     "note": "NOT: Bu bölümü gerçek başarılarınızla güncelleyin"
   },
   "vehicles": {
@@ -104,14 +135,39 @@
     "specs": "Teknik Özellikler",
     "features": "Özellikler",
     "philosophy": "Tasarım Felsefemiz",
+    "philosophyItems": {
+      "autonomous": {
+        "title": "Otonom Sistemler",
+        "description": "Yapay zeka ve makine öğrenimi algoritmaları kullanarak tam otonom uçuş ve görev yetenekleri."
+      },
+      "vision": {
+        "title": "Bilgisayarlı Görü",
+        "description": "Hedef tespiti, takibi ve tanıma için gelişmiş görüntü işleme teknikleri."
+      },
+      "reliability": {
+        "title": "Güvenilirlik",
+        "description": "Çoklu hata koruma sistemleri ve titiz test süreçleri ile elde edilen yüksek güvenilirlik."
+      }
+    },
     "note": "NOT: Bu bölümü SUAS 2026 araç bilgilerinizle güncelleyin",
-    "viewProcess": "Geliştirme Sürecini İnceleyin"
+    "viewProcess": "Detayları Gör"
   },
   "blog": {
     "title": "BLOG",
     "description": "Projelerimiz, teknik geliştirmelerimiz ve yarışma deneyimlerimiz hakkında detaylı yazılar ve güncellemeler.",
     "readMore": "Devamını Oku",
-    "readTime": "okuma",
+    "readTime": "oku",
+    "categories": {
+      "all": "Tümü",
+      "vehicleDevelopment": "Araç Geliştirme",
+      "autonomousSystems": "Otonom Sistemler",
+      "artificialIntelligence": "Yapay Zeka",
+      "competitions": "Yarışmalar",
+      "manufacturing": "Üretim",
+      "workshop": "Atölye",
+      "electronics": "Elektronik",
+      "navigation": "Navigasyon"
+    },
     "note": "NOT: Bu bölümü gerçek blog yazılarınızla güncelleyin",
     "newsletter": {
       "title": "Güncellemelerden Haberdar Olun",
@@ -184,11 +240,50 @@
     },
     "note": "NOT: Bu bölümü gerçek iletişim bilgilerinizle güncelleyin"
   },
+  "joinUs": {
+    "title": "ARAMIZA KATILIN",
+    "subtitle": "Geleceğin havacılık teknolojilerini birlikte inşa edelim. İTÜNOM ailesinin bir parçası olun.",
+    "departmentsTitle": "Çalışma Alanlarımız",
+    "departments": {
+      "software": {
+        "title": "Yazılım Ekibi",
+        "desc": "Otonom uçuş algoritmaları, görüntü işleme, yer kontrol istasyonu ve gömülü yazılım geliştirme."
+      },
+      "mechanical": {
+        "title": "Mekanik Ekibi",
+        "desc": "Aerodinamik tasarım, yapısal analiz, üretim ve montaj süreçleri."
+      },
+      "promotion": {
+        "title": "Tanıtım ve Sponsorluk Ekibi",
+        "desc": "Takım tanıtımı, sponsorluk kazanımı ve halkla ilişkiler yönetimi."
+      },
+      "avionics": {
+        "title": "Aviyonik Ekibi",
+        "desc": "Elektronik devre tasarımı, sensör entegrasyonu ve güç dağıtım sistemleri."
+      }
+    },
+    "process": {
+      "title": "Başvuru Süreci",
+      "description": "Her dönem başında yeni üye alımları gerçekleştiriyoruz. Başvurular değerlendirildikten sonra mülakat süreci başlar."
+    },
+    "apply": {
+      "title": "Başvuru Formu",
+      "text": "Aşağıdaki butona tıklayarak başvuru formuna ulaşabilirsiniz.",
+      "button": "Başvuru Yap"
+    }
+  },
   "footer": {
-    "about": "2014 yılından beri insansız hava araçları teknolojileri üzerine çalışan öğrenci topluluğu.",
-    "quickLinks": "Hızlı Erişim",
+    "teamName": "İTÜNOM İHA TAKIMI",
+    "teamDesc": "İstanbul Teknik Üniversitesi İnsansız Hava Araçları Takımı",
+    "about": "2014'ten beri insansız hava aracı teknolojilerini geliştirmeye adanmış bir öğrenci topluluğu.",
+    "quickLinks": "İletişime geçin",
     "resources": "Kaynaklar",
-    "copyright": "İTÜNOM UAV Team. Tüm hakları saklıdır."
+    "email": "E-posta",
+    "phone": "Telefon",
+    "address": "Adres",
+    "addressText": "İTÜ Ayazağa Kampüsü\n34469 Maslak, İstanbul",
+    "copyright": "© {year} İTÜNOM İHA Takımı. Tüm hakları saklıdır.",
+    "social": "Sosyal Medya"
   },
   "common": {
     "readMore": "Devamını Oku",

@@ -1,39 +1,40 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SponsorsPage = () => {
+  const { t } = useTranslation();
   // TODO: Bu bölümü gerçek sponsorlarınızın bilgileriyle güncelleyin
   const mainSponsors = [
     {
       name: 'Turkish Technic',
-      logo: 'https://via.placeholder.com/300x150?text=Turkish+Technic',
-      tier: 'Ana Sponsor',
-      description: 'Teknik desteği ve malzeme sağlayan ana sponsorumuz'
+      logo: '/photos/sponsors/1.png',
+      tier: 'Platinum Sponsor',
+      description: 'Technical support and material provider main sponsor'
     },
     {
-      name: 'ASELSAN',
-      logo: 'https://via.placeholder.com/300x150?text=ASELSAN',
-      tier: 'Platin Sponsor',
-      description: 'Elektronik sistemler ve teknoloji sponsoru'
+      name: 'MKE',
+      logo: '/photos/sponsors/mke.png',
+      tier: 'Platinum Sponsor',
+      description: 'Electronics systems and technology sponsor'
     },
     {
       name: 'TÜBİTAK',
-      logo: 'https://via.placeholder.com/300x150?text=TÜBİTAK',
-      tier: 'Platin Sponsor',
-      description: 'Ar-Ge ve bilimsel araştırma desteği'
+      logo: '/photos/sponsors/tubitak.png',
+      tier: 'Platinum Sponsor',
+      description: 'R&D and scientific research support'
     }
   ];
 
   const goldSponsors = [
-    { name: 'Halkbank', logo: 'https://via.placeholder.com/250x120?text=Halkbank' },
-    { name: 'MKE', logo: 'https://via.placeholder.com/250x120?text=MKE' },
-    { name: 'Arz Portföy', logo: 'https://via.placeholder.com/250x120?text=Arz+Portfoy' }
+    { name: 'Halkbank', logo: '/photos/sponsors/halkbank.png' },
+    { name: 'ASELSAN', logo: '/photos/sponsors/aselsann.png' },
+    { name: 'Arz Portföy', logo: '/photos/sponsors/arz.png' }
   ];
 
   const silverSponsors = [
-    { name: 'Ege Bant', logo: 'https://via.placeholder.com/200x100?text=Ege+Bant' },
-    { name: 'Koyuncu', logo: 'https://via.placeholder.com/200x100?text=Koyuncu' },
-    { name: 'İTÜ', logo: 'https://via.placeholder.com/200x100?text=ITU' },
-    { name: 'RoboNation', logo: 'https://via.placeholder.com/200x100?text=RoboNation' }
+    { name: 'Ege Bant', logo: '/photos/sponsors/ege_bant.png' },
+    { name: 'Koyuncu', logo: '/photos/sponsors/2.png' },
+    { name: 'İTÜ', logo: '/photos/sponsors/itu.png' }
   ];
 
   return (
@@ -42,14 +43,14 @@ const SponsorsPage = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            SPONSORLARIMIZ
+            {t('sponsors.title')}
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Projelerimizi destekleyen ve İTÜNOM ailesinin bir parçası olan değerli sponsorlarımıza teşekkür ederiz.
+            {t('sponsors.description')}
           </p>
           <p className="text-red-500 mt-4">
-            NOT: Bu bölümü gerçek sponsor logoları ve bilgileriyle güncelleyin
+            {t('sponsors.note')}
           </p>
         </div>
       </section>
@@ -58,7 +59,7 @@ const SponsorsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Ana ve Platin Sponsorlar
+            {t('sponsors.main')}
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -91,7 +92,7 @@ const SponsorsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Altın Sponsorlar
+            {t('sponsors.gold')}
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -117,7 +118,7 @@ const SponsorsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Gümüş Sponsorlar
+            {t('sponsors.silver')}
           </h2>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -143,17 +144,16 @@ const SponsorsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Sponsor Olmak İster misiniz?
+            {t('sponsors.become.title')}
           </h2>
           <p className="text-lg text-gray-300 mb-8">
-            İTÜNOM ile işbirliği yaparak Havacılık ve İHA teknolojilerinin geleceğine katkıda bulunabilirsiniz. 
-            Takımımızı desteklemek için bizimle iletişime geçin.
+            {t('sponsors.become.description')}
           </p>
           <a
-            href="mailto:iha@itu.edu.tr?subject=Sponsorluk Talebi"
+            href="mailto:itunomuavteam@itu.edu.tr?subject=Sponsorluk Talebi"
             className="inline-flex items-center space-x-2 px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-500/50"
           >
-            <span>Sponsorluk İçin İletişime Geçin</span>
+            <span>{t('sponsors.become.button')}</span>
           </a>
         </div>
       </section>
@@ -162,31 +162,31 @@ const SponsorsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Sponsorluk Avantajları
+            {t('sponsors.benefits.title')}
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <div className="text-red-500 text-4xl font-bold mb-3">01</div>
-              <h3 className="text-xl font-bold text-white mb-3">Marka Görünürlüğü</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{t('sponsors.benefits.visibility.title')}</h3>
               <p className="text-gray-300">
-                Yarışmalarda, medyada ve sosyal platformlarda markanızın görünürlüğü artacak.
+                {t('sponsors.benefits.visibility.text')}
               </p>
             </div>
 
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <div className="text-red-500 text-4xl font-bold mb-3">02</div>
-              <h3 className="text-xl font-bold text-white mb-3">Genç Yetenekler</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{t('sponsors.benefits.talent.title')}</h3>
               <p className="text-gray-300">
-                İTÜ'nün yetenekli mühendislik öğrencileriyle tanışma ve işbirliği fırsatı.
+                {t('sponsors.benefits.talent.text')}
               </p>
             </div>
 
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <div className="text-red-500 text-4xl font-bold mb-3">03</div>
-              <h3 className="text-xl font-bold text-white mb-3">Teknoloji Yatırımı</h3>
+              <h3 className="text-xl font-bold text-white mb-3">{t('sponsors.benefits.investment.title')}</h3>
               <p className="text-gray-300">
-                Havacılık ve İHA teknolojilerinin geleceğine yatırım yapmanın gururu.
+                {t('sponsors.benefits.investment.text')}
               </p>
             </div>
           </div>

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const ContactPage = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -11,8 +13,8 @@ const ContactPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Backend entegrasyonu yapıldığında form gönderimi eklenecek
-    const mailtoLink = `mailto:iha@itu.edu.tr?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`İsim: ${formData.name}\nEmail: ${formData.email}\n\nMesaj:\n${formData.message}`)}`;
+    // TODO: Add form submission when backend integration is ready
+    const mailtoLink = `mailto:itunomuavteam@itu.edu.tr?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
     window.location.href = mailtoLink;
   };
 
@@ -29,12 +31,11 @@ const ContactPage = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            İLETİŞİM
+            {t('contact.title')}
           </h1>
           <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Bizimle iletişime geçmek, takımımıza katılmak veya sponsor olmak için
-            aşağıdaki iletişim bilgilerini kullanabilirsiniz.
+            {t('contact.description')}
           </p>
         </div>
       </section>
@@ -46,39 +47,24 @@ const ContactPage = () => {
             {/* Contact Information */}
             <div>
               <h2 className="text-4xl font-bold text-white mb-8">
-                İletişim Bilgileri
+                {t('contact.info')}
               </h2>
               <p className="text-gray-300 mb-8 leading-relaxed">
-                NOT: Bu bölümü gerçek iletişim bilgilerinizle güncelleyin
+              
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <div className="p-3 bg-red-600 rounded-lg">
                     <Mail size={24} className="text-white" />
-                  </div>
+                  </div>  
                   <div>
-                    <h3 className="text-white font-semibold mb-1">Email</h3>
+                    <h3 className="text-white font-semibold mb-1">{t('contact.email')}</h3>
                     <a 
-                      href="mailto:iha@itu.edu.tr" 
+                      href="mailto:itunomuavteam@itu.edu.tr" 
                       className="text-gray-300 hover:text-red-500 transition-colors"
                     >
-                      iha@itu.edu.tr
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="p-3 bg-red-600 rounded-lg">
-                    <Phone size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold mb-1">Telefon</h3>
-                    <a 
-                      href="tel:+902122931300" 
-                      className="text-gray-300 hover:text-red-500 transition-colors"
-                    >
-                      +90 (212) 293 13 00
+                      itunomuavteam@itu.edu.tr
                     </a>
                   </div>
                 </div>
@@ -88,11 +74,11 @@ const ContactPage = () => {
                     <MapPin size={24} className="text-white" />
                   </div>
                   <div>
-                    <h3 className="text-white font-semibold mb-1">Adres</h3>
+                    <h3 className="text-white font-semibold mb-1">{t('contact.address')}</h3>
                     <p className="text-gray-300">
-                      İstanbul Teknik Üniversitesi<br />
-                      Ayazağa Kampüsü<br />
-                      34469 Maslak, İstanbul
+                      Istanbul Technical University<br />
+                      Ayazağa Campus<br />
+                      34469 Maslak, Istanbul
                     </p>
                   </div>
                 </div>
@@ -101,7 +87,7 @@ const ContactPage = () => {
               {/* Social Media */}
               <div className="mt-12">
                 <h3 className="text-2xl font-bold text-white mb-6">
-                  Sosyal Medya
+                  {t('contact.social')}
                 </h3>
                 <div className="flex space-x-4">
                   <a
@@ -139,13 +125,13 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div>
               <h2 className="text-4xl font-bold text-white mb-8">
-                Mesaj Gönderin
+                {t('contact.form.title')}
               </h2>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-white font-semibold mb-2">
-                    İsim Soyisim
+                    {t('contact.form.name')}
                   </label>
                   <input
                     type="text"
@@ -155,13 +141,13 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-red-600 transition-colors"
-                    placeholder="Adınız Soyadınız"
+                    placeholder={t('contact.form.namePlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="email" className="block text-white font-semibold mb-2">
-                    Email
+                    {t('contact.email')}
                   </label>
                   <input
                     type="email"
@@ -171,13 +157,13 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-red-600 transition-colors"
-                    placeholder="email@example.com"
+                    placeholder={t('contact.form.emailPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="subject" className="block text-white font-semibold mb-2">
-                    Konu
+                    {t('contact.form.subject')}
                   </label>
                   <input
                     type="text"
@@ -187,13 +173,13 @@ const ContactPage = () => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-red-600 transition-colors"
-                    placeholder="Mesajınızın konusu"
+                    placeholder={t('contact.form.subjectPlaceholder')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-white font-semibold mb-2">
-                    Mesaj
+                    {t('contact.form.message')}
                   </label>
                   <textarea
                     id="message"
@@ -203,7 +189,7 @@ const ContactPage = () => {
                     required
                     rows="6"
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-red-600 transition-colors resize-none"
-                    placeholder="Mesajınızı buraya yazın..."
+                    placeholder={t('contact.form.messagePlaceholder')}
                   ></textarea>
                 </div>
 
@@ -211,7 +197,7 @@ const ContactPage = () => {
                   type="submit"
                   className="w-full flex items-center justify-center space-x-2 px-8 py-4 bg-red-600 text-white font-semibold rounded-lg hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-500/50"
                 >
-                  <span>Gönder</span>
+                  <span>{t('contact.form.send')}</span>
                   <Send size={20} />
                 </button>
               </form>
@@ -224,18 +210,18 @@ const ContactPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Konumumuz
+            {t('contact.location')}
           </h2>
           
           <div className="relative h-96 bg-gray-800 rounded-lg overflow-hidden border border-gray-700">
-            {/* TODO: Google Maps iframe veya harita component'i eklenebilir */}
+            {/* TODO: You can add a Google Maps iframe or map component here */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <MapPin size={64} className="text-red-500 mx-auto mb-4" />
-                <p className="text-white text-xl font-semibold">İstanbul Teknik Üniversitesi</p>
-                <p className="text-gray-400">Ayazağa Kampüsü, Maslak, İstanbul</p>
+                <p className="text-white text-xl font-semibold">Istanbul Technical University</p>
+                <p className="text-gray-400">Ayazağa Campus, Maslak, Istanbul</p>
                 <p className="text-gray-500 text-sm mt-4">
-                  NOT: Buraya Google Maps iframe ekleyebilirsiniz
+                  NOTE: You can embed a Google Maps iframe here
                 </p>
               </div>
             </div>
@@ -247,37 +233,34 @@ const ContactPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Sık Sorulan Sorular
+            {t('contact.faq.title')}
           </h2>
 
           <div className="space-y-6">
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-3">
-                Takıma nasıl katılabilirim?
+                {t('contact.faq.q1.question')}
               </h3>
               <p className="text-gray-300">
-                İTÜ öğrencisiyseniz, her dönem başında yapılan üye alımlarına başvurabilirsiniz. 
-                Detaylı bilgi için iha@itu.edu.tr adresine email gönderin.
+                {t('contact.faq.q1.answer')}
               </p>
             </div>
 
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-3">
-                Hangi bölümlerden öğrenciler katılabiliyor?
+                {t('contact.faq.q2.question')}
               </h3>
               <p className="text-gray-300">
-                Uçak Mühendisliği, Bilgisayar Mühendisliği, Elektrik-Elektronik Mühendisliği, 
-                Makina Mühendisliği ve tüm mühendislik bölümlerinden öğrenciler katılabilir.
+                {t('contact.faq.q2.answer')}
               </p>
             </div>
 
             <div className="bg-gray-800/50 p-6 rounded-lg border border-gray-700">
               <h3 className="text-xl font-bold text-white mb-3">
-                Sponsor olmak için ne yapmalıyım?
+                {t('contact.faq.q3.question')}
               </h3>
               <p className="text-gray-300">
-                Sponsorluk fırsatları için iha@itu.edu.tr adresine "Sponsorluk Talebi" 
-                konulu bir email gönderebilirsiniz. Size sponsorluk paketlerimizi ileteceğiz.
+                {t('contact.faq.q3.answer')}
               </p>
             </div>
           </div>

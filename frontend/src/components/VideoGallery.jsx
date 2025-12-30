@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { Play, Clock, Calendar, Tag } from 'lucide-react';
 import { galleryData, categories } from '../mock/galleryData';
+import { useTranslation } from 'react-i18next';
 
 const VideoGallery = () => {
-  const [selectedCategory, setSelectedCategory] = useState('Tümü');
+  const { t } = useTranslation();
+  const [selectedCategory, setSelectedCategory] = useState('all');
 
-  const filteredVideos = selectedCategory === 'Tümü'
+  const filteredVideos = selectedCategory === 'all'
     ? galleryData.videos
     : galleryData.videos.filter(video => video.category === selectedCategory);
 
@@ -28,7 +30,7 @@ const VideoGallery = () => {
                   : 'bg-white/10 text-gray-300 hover:bg-white/20 border border-white/10'
               }`}
             >
-              {category}
+              {t(`gallery.categories.${category}`)}
             </button>
           ))}
         </div>
@@ -44,7 +46,7 @@ const VideoGallery = () => {
               <div className="relative overflow-hidden">
                 <img
                   src={video.thumbnailUrl}
-                  alt={video.title}
+                  alt={t(video.title)}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition-colors flex items-center justify-center">
@@ -62,10 +64,10 @@ const VideoGallery = () => {
               
               <div className="p-6 text-white">
                 <h3 className="text-xl font-bold mb-2 line-clamp-2 group-hover:text-red-500 transition-colors">
-                  {video.title}
+                  {t(video.title)}
                 </h3>
                 <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                  {video.description}
+                  {t(video.description)}
                 </p>
                 
                 <div className="flex items-center space-x-4 text-sm text-gray-400">
@@ -75,7 +77,7 @@ const VideoGallery = () => {
                   </span>
                   <span className="flex items-center space-x-1">
                     <Tag size={14} />
-                    <span>{video.category}</span>
+                    <span>{t(`gallery.categories.${video.category}`)}</span>
                   </span>
                 </div>
               </div>

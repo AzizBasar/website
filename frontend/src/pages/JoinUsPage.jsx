@@ -1,0 +1,102 @@
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { Users, Rocket, Brain, Code, Wrench, Send } from 'lucide-react';
+
+const JoinUsPage = () => {
+  const { t } = useTranslation();
+
+  const departments = [
+    {
+      icon: <Code size={32} className="text-red-500" />,
+      title: t('joinUs.departments.software.title'),
+      description: t('joinUs.departments.software.desc')
+    },
+    {
+      icon: <Wrench size={32} className="text-red-500" />,
+      title: t('joinUs.departments.mechanical.title'),
+      description: t('joinUs.departments.mechanical.desc')
+    },
+    {
+      icon: <Brain size={32} className="text-red-500" />,
+      title: t('joinUs.departments.promotion.title'),
+      description: t('joinUs.departments.promotion.desc')
+    },
+    {
+      icon: <Rocket size={32} className="text-red-500" />,
+      title: t('joinUs.departments.avionics.title'),
+      description: t('joinUs.departments.avionics.desc')
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-black pt-16">
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            {t('joinUs.title')}
+          </h1>
+          <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            {t('joinUs.subtitle')}
+          </p>
+        </div>
+      </section>
+
+      {/* Departments Grid */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            {t('joinUs.departmentsTitle')}
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {departments.map((dept, index) => (
+              <div key={index} className="bg-gray-900 p-8 rounded-xl border border-gray-800 hover:border-red-500/50 transition-all duration-300 hover:transform hover:-translate-y-1 group">
+                <div className="mb-6 p-4 bg-black/50 rounded-full w-fit group-hover:scale-110 transition-transform">
+                  {dept.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{dept.title}</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {dept.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Application Process */}
+      <section className="py-16 px-4 bg-gray-900/50">
+        <div className="max-w-4xl mx-auto text-center">
+          <Users size={48} className="text-red-500 mx-auto mb-6" />
+          <h2 className="text-3xl font-bold text-white mb-6">
+            {t('joinUs.process.title')}
+          </h2>
+          <p className="text-gray-300 text-lg mb-8 leading-relaxed">
+            {t('joinUs.process.description')}
+          </p>
+          
+          <div className="bg-black/50 p-8 rounded-2xl border border-gray-800 max-w-2xl mx-auto">
+            <h3 className="text-xl font-semibold text-white mb-4 flex items-center justify-center gap-2">
+              <Send size={20} className="text-red-500" />
+              {t('joinUs.apply.title')}
+            </h3>
+            <p className="text-gray-400 mb-6">
+              {t('joinUs.apply.text')}
+            </p>
+            <a 
+              href="https://forms.google.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition-all duration-300 shadow-lg shadow-red-600/20 hover:shadow-red-600/40"
+            >
+              {t('joinUs.apply.button')}
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default JoinUsPage;

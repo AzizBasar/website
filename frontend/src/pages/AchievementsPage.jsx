@@ -1,8 +1,10 @@
 import React from 'react';
 import { Trophy, Calendar, MapPin, Award } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const AchievementsPage = () => {
-  // TODO: Bu bölümü gerçek başarılarınızla güncelleyin
+  const { t } = useTranslation();
+  // TODO: Update this section with your real achievements
   const suasAchievements = [
     { year: '2025', place: '11th Place', location: 'Maryland, USA' },
     { year: '2024', place: '2nd Place', location: 'Maryland, USA', medal: 'silver' },
@@ -37,15 +39,14 @@ const AchievementsPage = () => {
       <section className="relative py-20 px-4 bg-gradient-to-b from-black via-gray-900 to-black">
         <div className="max-w-6xl mx-auto text-center">
           <div className="inline-block p-4 bg-red-600/20 rounded-full mb-6">
-            <Trophy size={64} className="text-red-500" />
+            <Trophy size={32} className="text-red-500" />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            BAŞARILARIMIZ
+            {t('achievements.title')}
           </h1>
-          <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ulusal ve uluslararası yarışmalarda elde ettiğimiz başarılar, 
-            takımımızın özveri ve çalışkanlığının bir yansımasıdır.
+          <div className="w-48 h-1 bg-red-600 mx-auto mb-8"></div>
+          <p className="text-xl text-gray-300 max-w-30xl mx-auto">
+            {t('achievements.description')}
           </p>
         </div>
       </section>
@@ -54,13 +55,10 @@ const AchievementsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-4">
-            SUAS Competitions
+            {t('achievements.suas')}
           </h2>
           <p className="text-center text-gray-400 mb-4">
-            RoboNation Student Unmanned Aerial Systems Competition
-          </p>
-          <p className="text-center text-red-500 mb-12">
-            NOT: Bu bölümü gerçek SUAS başarılarınızla güncelleyin
+            {t('achievements.suasDesc')}
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -102,14 +100,12 @@ const AchievementsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-4">
-            Teknofest Competitions
+            {t('achievements.teknofest')}
           </h2>
           <p className="text-center text-gray-400 mb-4">
-            İnsansız Hava Araçları Yarışması
+            {t('achievements.teknofestDesc')}
           </p>
-          <p className="text-center text-red-500 mb-12">
-            NOT: Bu bölümü gerçek Teknofest başarılarınızla güncelleyin
-          </p>
+          
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
             {teknofestAchievements.map((achievement, index) => (
@@ -150,7 +146,7 @@ const AchievementsPage = () => {
       <section className="py-20 px-4 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-12">
-            Öne Çıkan Başarılar
+            {t('achievements.highlights')}
           </h2>
           
           <div className="grid md:grid-cols-2 gap-8">
@@ -160,13 +156,12 @@ const AchievementsPage = () => {
                   <Trophy size={32} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">SUAS 2023</h3>
-                  <p className="text-yellow-400 font-semibold">Şampiyonluk</p>
+                  <h3 className="text-2xl font-bold text-white">{t('achievements.highlight1.title')}</h3>
+                  <p className="text-yellow-400 font-semibold">{t('achievements.highlight1.subtitle')}</p>
                 </div>
               </div>
               <p className="text-gray-300">
-                Amerika'da düzenlenen SUAS 2023 yarışmasında elde ettiğimiz şampiyonluk, 
-                takımımızın uluslararası arenadaki gücünü göstermiştir.
+                {t('achievements.highlight1.description')}
               </p>
             </div>
 
@@ -176,13 +171,12 @@ const AchievementsPage = () => {
                   <Trophy size={32} className="text-white" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white">Teknofest 2019</h3>
-                  <p className="text-red-400 font-semibold">Birincilik</p>
+                  <h3 className="text-2xl font-bold text-white">{t('achievements.highlight2.title')}</h3>
+                  <p className="text-red-400 font-semibold">{t('achievements.highlight2.subtitle')}</p>
                 </div>
               </div>
               <p className="text-gray-300">
-                Türkiye'nin en büyük teknoloji festivali Teknofest'te elde ettiğimiz birincilik, 
-                ulusal planda öncü olduğumuzu kanıtlamıştır.
+                {t('achievements.highlight2.description')}
               </p>
             </div>
           </div>

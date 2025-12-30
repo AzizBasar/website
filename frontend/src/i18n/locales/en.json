@@ -1,0 +1,294 @@
+{
+  "nav": {
+    "home": "HOME",
+    "gallery": "GALLERY",
+    "vehicles": "OUR VEHICLES",
+    "team": "OUR TEAM",
+    "achievements": "OUR ACHIEVEMENTS",
+    "sponsors": "SPONSORS",
+    "contact": "CONTACT",
+    "blog": "BLOG",
+    "join_us": "JOIN US"
+  },
+  "search": {
+    "placeholder": "Type a command or search..."
+  },
+  "home": {
+    "hero": {
+      "title": "ITUNOM UAV TEAM",
+      "subtitle": "ITUNOM Unmanned Aerial Vehicles Team",
+      "university": "Istanbul Technical University",
+      "cta": "SUAS 2025"
+    },
+    "about": {
+      "title": "Engineering the Future of Aviation",
+      "description": "Founded in 2014 by undergraduate students, ITUNOM Unmanned Aerial Vehicles Team draws its strength from Istanbul Technical University's deep-rooted engineering culture. At the center of our mission lies more than just producing unmanned aerial vehicles; we are dedicated to raising qualified, visionary, and productive engineers in line with Turkey's strategic scientific and technological development goals.",
+      "vision": {
+        "title": "Our Vision",
+        "text": "We proudly represent our country in the most prestigious national and international competitions by developing autonomous systems and innovative software solutions."
+      },
+      "workspace": {
+        "title": "Our Mission",
+        "text": "Our team functions as an interdisciplinary R&D laboratory, transforming theoretical knowledge into field-tested practical experience."
+      }
+    },
+    "features": {
+      "achievements": {
+        "title": "Our Achievements",
+        "description": "SUAS 2023 Champion, Teknofest 2024 3rd Place"
+      },
+      "team": {
+        "title": "Our Team",
+        "description": "30+ student engineers and researchers"
+      },
+      "vehicles": {
+        "title": "Our Vehicles",
+        "description": "Autonomous UAV systems and technologies"
+      },
+      "blog": {
+        "title": "Blog",
+        "description": "Our projects and development processes"
+      }
+    },
+    "cta": {
+      "title": "Join Our Team",
+      "description": "Shape the future of aviation technologies with ITUNOM. Work on autonomous systems, artificial intelligence, and drone technologies.",
+      "button": "Contact Us"
+    }
+  },
+  "gallery": {
+    "title": "GALLERY",
+    "description": "You can access our team's photos and videos via the buttons below. You can request our team's media and gallery archive by sending an email to <0>iha@itu.edu.tr</0>.",
+    "photos": "Photos",
+    "videos": "Videos",
+    "categories": {
+      "all": "All",
+      "testFlights": "Test Flights",
+      "achievements": "Achievements",
+      "workshop": "Workshop",
+      "projects": "Projects",
+      "events": "Events",
+      "competitions": "Competitions",
+      "vehicleIntro": "Vehicle Introductions",
+      "tests": "Tests",
+      "intro": "Introduction",
+      "navigation": "Navigation",
+      "electronics": "Electronics",
+      "autonomousSystems": "Autonomous Systems",
+      "ai": "Artificial Intelligence"
+    },
+    "items": {
+      "photo_1": { "title": "SIMSEK UAV Test Flight", "desc": "Test flight of Simsek UAV developed for SUAS 2024 competition. Autonomous mission capabilities were successfully tested." },
+      "photo_2": { "title": "SUAS 2023 Championship", "desc": "Our championship trophy and team photo at the SUAS 2023 competition held in the USA." },
+      "photo_3": { "title": "Teknofest 2024 Ranking", "desc": "We are proud to have achieved 3rd place in the Teknofest Unmanned Aerial Vehicles competition." },
+      "photo_4": { "title": "Workshop Activities", "desc": "UAV production and assembly work of our team members in the ITU workshop." },
+      "photo_5": { "title": "Autonomous Mission Test", "desc": "Field test of Simsek UAV's autonomous navigation and target detection systems." },
+      "photo_6": { "title": "Introductory Meeting", "desc": "Shots from our new term introductory meeting. We came together with our new friends who joined us." },
+      "photo_7": { "title": "DISSIZ Combat UAV", "desc": "Dissiz project developed for the Teknofest 2024 Combat UAV category." },
+      "photo_8": { "title": "TOSUN UAV Launch", "desc": "Introduction and first flight moments of TOSUN UAV developed for SUAS 2022." },
+      "photo_9": { "title": "Meeting with Sponsors", "desc": "Meeting held with our sponsors who support our projects." },
+      "video_1": { "title": "Our SUAS 2023 Championship Story", "desc": "Our journey to the championship at the SUAS 2023 competition held in America." },
+      "video_2": { "title": "SIMSEK UAV Introduction", "desc": "Technical specifications and capabilities of Simsek UAV developed for SUAS 2024." },
+      "video_3": { "title": "Teknofest 2024 Competition Moments", "desc": "Our performance exhibited in the Teknofest Unmanned Aerial Vehicles competition." },
+      "video_4": { "title": "Workshop Diaries - Part 1", "desc": "Video series where our team members explain the UAV production process in the workshop." },
+      "video_5": { "title": "Autonomous Flight System Test", "desc": "Test video of the autonomous flight control and target detection systems we developed." },
+      "video_6": { "title": "Team Introduction Video 2024", "desc": "ITUNOM UAV Team's 2024 introduction video and our team members." }
+    }
+  },
+  "team": {
+    "title": "OUR TEAM",
+    "description": "ITUNOM is a team where talented students from different engineering disciplines come together to develop world-class UAV systems.",
+    "leaders": "Team Leaders",
+    "advisors": "Our Advisor",
+    "note": "NOTE: Update this section with your actual team members' information",
+    "join": {
+      "title": "Want to Join Our Team?",
+      "description": "If you are an ITU student and interested in aviation technologies, you can join us. We recruit new members every semester.",
+      "button": "Contact for Application"
+    }
+  },
+  "achievements": {
+    "title": "OUR ACHIEVEMENTS",
+    "description": "The achievements we have obtained in national and international competitions are a reflection of our team's dedication and hard work.",
+    "suas": "SUAS Competitions",
+    "suasDesc": "RoboNation Student Unmanned Aerial Systems Competition",
+    "teknofest": "Teknofest Competitions",
+    "teknofestDesc": "Unmanned Aerial Vehicles Competition",
+    "highlights": "Highlights",
+    "highlight1": {
+      "title": "SUAS 2023",
+      "subtitle": "Championship",
+      "description": "Winning the championship at the SUAS 2023 competition held in the USA demonstrated our team's strength on the international stage."
+    },
+    "highlight2": {
+      "title": "Teknofest 2019",
+      "subtitle": "First Place",
+      "description": "Our first place victory at Teknofest, Turkey's largest technology festival, proved that we are pioneers on the national level."
+    },
+    "note": "NOTE: Update this section with your actual achievements"
+  },
+  "vehicles": {
+    "title": "OUR VEHICLES",
+    "description": "The UAV systems we have developed over the years are a reflection of engineering excellence and innovative solutions.",
+    "current": "Current Vehicle",
+    "past": "Past Vehicles",
+    "specs": "Technical Specifications",
+    "features": "Features",
+    "philosophy": "Design Philosophy",
+    "philosophyItems": {
+      "autonomous": {
+        "title": "Autonomous Systems",
+        "description": "Fully autonomous flight and mission capabilities using artificial intelligence and machine learning algorithms."
+      },
+      "vision": {
+        "title": "Computer Vision",
+        "description": "Advanced image processing techniques for target detection, tracking, and recognition."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "High reliability achieved through multiple failsafe systems and rigorous testing processes."
+      }
+    },
+    "note": "NOTE: Update this section with your SUAS 2026 vehicle information",
+    "viewProcess": "View Details"
+  },
+  "blog": {
+    "title": "BLOG",
+    "description": "Detailed articles and updates about our projects, technical developments, and competition experiences.",
+    "readMore": "Read More",
+    "readTime": "read",
+    "categories": {
+      "all": "All",
+      "vehicleDevelopment": "Vehicle Development",
+      "autonomousSystems": "Autonomous Systems",
+      "artificialIntelligence": "Artificial Intelligence",
+      "competitions": "Competitions",
+      "manufacturing": "Manufacturing",
+      "workshop": "Workshop",
+      "electronics": "Electronics",
+      "navigation": "Navigation"
+    },
+    "note": "NOTE: Update this section with your actual blog posts",
+    "newsletter": {
+      "title": "Stay Updated",
+      "description": "Follow us to get information about our new blog posts, project updates, and competition announcements.",
+      "button": "Contact Us"
+    }
+  },
+  "sponsors": {
+    "title": "OUR SPONSORS",
+    "description": "We thank our valuable sponsors who support our projects and are part of the ITUNOM family.",
+    "main": "Main and Platinum Sponsors",
+    "gold": "Gold Sponsors",
+    "silver": "Silver Sponsors",
+    "become": {
+      "title": "Want to Become a Sponsor?",
+      "description": "By collaborating with ITUNOM, you can contribute to the future of Aviation and UAV technologies. Contact us to support our team.",
+      "button": "Contact for Sponsorship"
+    },
+    "benefits": {
+      "title": "Sponsorship Benefits",
+      "visibility": {
+        "title": "Brand Visibility",
+        "text": "Your brand visibility will increase in competitions, media, and social platforms."
+      },
+      "talent": {
+        "title": "Young Talents",
+        "text": "Opportunity to meet and collaborate with ITU's talented engineering students."
+      },
+      "investment": {
+        "title": "Technology Investment",
+        "text": "The pride of investing in the future of aviation and UAV technologies."
+      }
+    },
+    "note": "NOTE: Update this section with actual sponsor logos and information"
+  },
+  "contact": {
+    "title": "CONTACT",
+    "description": "You can use the contact information below to get in touch with us, join our team, or become a sponsor.",
+    "info": "Contact Information",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "social": "Social Media",
+    "form": {
+      "title": "Send a Message",
+      "name": "Name Surname",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send",
+      "namePlaceholder": "Your Name Surname",
+      "emailPlaceholder": "email@example.com",
+      "subjectPlaceholder": "Subject of your message",
+      "messagePlaceholder": "Write your message here..."
+    },
+    "location": "Our Location",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "How can I join the team?",
+        "answer": "If you are an ITU student, you can apply for membership recruitments held at the beginning of each semester. For detailed information, send an email to iha@itu.edu.tr."
+      },
+      "q2": {
+        "question": "Which departments can students join from?",
+        "answer": "Students from Aeronautical Engineering, Computer Engineering, Electrical-Electronics Engineering, Mechanical Engineering, and all engineering departments can join."
+      },
+      "q3": {
+        "question": "What should I do to become a sponsor?",
+        "answer": "For sponsorship opportunities, you can send an email with the subject 'Sponsorship Request' to iha@itu.edu.tr. We will forward our sponsorship packages to you."
+      }
+    },
+    "note": "NOTE: Update this section with your actual contact information"
+  },
+  "joinUs": {
+    "title": "JOIN US",
+    "subtitle": "Let's build the future of aviation technologies together. Be a part of the ITUNOM family.",
+    "departmentsTitle": "Our Departments",
+    "departments": {
+      "software": {
+        "title": "Software Team",
+        "desc": "Autonomous flight algorithms, image processing, ground control station, and embedded software development."
+      },
+      "mechanical": {
+        "title": "Mechanical Team",
+        "desc": "Aerodynamic design, structural analysis, manufacturing, and assembly processes."
+      },
+      "promotion": {
+        "title": "Promotion & Sponsorship Team",
+        "desc": "Managing team promotion, sponsorship acquisition, and public relations."
+      },
+      "avionics": {
+        "title": "Avionics Team",
+        "desc": "Electronic circuit design, sensor integration, and power distribution systems."
+      }
+    },
+    "process": {
+      "title": "Application Process",
+      "description": "We recruit new members at the beginning of each semester. After applications are evaluated, the interview process begins."
+    },
+    "apply": {
+      "title": "Application Form",
+      "text": "You can access the application form by clicking the button below.",
+      "button": "Apply Now"
+    }
+  },
+  "footer": {
+    "teamName": "ITUNOM UAV TEAM",
+    "teamDesc": "Istanbul Technical University Unmanned Aerial Vehicles Team",
+    "about": "Since 2014, a student community dedicated to advancing unmanned aerial vehicle technologies.",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "addressText": "ITU Ayazağa Campus\n34469 Maslak, Istanbul",
+    "copyright": "© {year} ITUNOM UAV Team. All rights reserved.",
+    "social": "Social Media"
+  },
+  "common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "close": "Close"
+  }
+}

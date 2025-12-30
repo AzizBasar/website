@@ -13,6 +13,7 @@ import VehiclesPage from "./pages/VehiclesPage";
 import BlogPage from "./pages/BlogPage";
 import SponsorsPage from "./pages/SponsorsPage";
 import ContactPage from "./pages/ContactPage";
+import JoinUsPage from "./pages/JoinUsPage";
 
 const GalleryPage = () => {
   const [activeTab, setActiveTab] = useState('photos');
@@ -42,6 +43,7 @@ function App() {
           <Route path="/blog" element={<><BlogPage /><Footer /></>} />
           <Route path="/sponsorlar" element={<><SponsorsPage /><Footer /></>} />
           <Route path="/iletisim" element={<><ContactPage /><Footer /></>} />
+          <Route path="/join-us" element={<><JoinUsPage /><Footer /></>} />
         </Routes>
       </BrowserRouter>
     </div>

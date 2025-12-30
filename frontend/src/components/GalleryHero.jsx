@@ -1,23 +1,23 @@
 import React from 'react';
 import { Image, Video } from 'lucide-react';
+import { useTranslation, Trans } from 'react-i18next';
 
 const GalleryHero = ({ onTabChange, activeTab }) => {
+  const { t } = useTranslation();
+
   return (
     <div className="relative min-h-[60vh] flex items-center justify-center bg-gradient-to-b from-black via-gray-900 to-black">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?w=1600&q=80')] bg-cover bg-center opacity-20"></div>
       
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
-          GALERİ
+          {t('gallery.title')}
         </h1>
         
         <p className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl mx-auto leading-relaxed">
-          Ekibimizin fotoğraf ve videolarına aşağıdaki düğmeler üzerinden ulaşabilirsiniz.
-          Ekibimize ait medya ve galeri arşivini{' '}
-          <a href="mailto:iha@itu.edu.tr" className="text-red-500 hover:text-red-400 transition-colors">
-            iha@itu.edu.tr
-          </a>{' '}
-          adresine e-posta göndererek talep edebilirsiniz.
+          <Trans i18nKey="gallery.description">
+            Ekibimizin fotoğraf ve videolarına aşağıdaki düğmeler üzerinden ulaşabilirsiniz. Ekibimize ait medya ve galeri arşivini <a href="mailto:iha@itu.edu.tr" className="text-red-500 hover:text-red-400 transition-colors">iha@itu.edu.tr</a> adresine e-posta göndererek talep edebilirsiniz.
+          </Trans>
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
@@ -30,7 +30,7 @@ const GalleryHero = ({ onTabChange, activeTab }) => {
             }`}
           >
             <Image size={24} className="group-hover:scale-110 transition-transform" />
-            <span>Fotoğraflar</span>
+            <span>{t('gallery.photos')}</span>
           </button>
 
           <button
@@ -42,7 +42,7 @@ const GalleryHero = ({ onTabChange, activeTab }) => {
             }`}
           >
             <Video size={24} className="group-hover:scale-110 transition-transform" />
-            <span>Videolar</span>
+            <span>{t('gallery.videos')}</span>
           </button>
         </div>
       </div>

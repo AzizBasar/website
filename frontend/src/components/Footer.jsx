@@ -1,22 +1,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Linkedin, Instagram, Youtube, Github } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { name: 'Ana Sayfa', path: '/' },
-    { name: 'Takımımız', path: '/takim' },
-    { name: 'Araçlarımız', path: '/araclar' },
-    { name: 'Başarılarımız', path: '/basarilar' }
+    { name: t('nav.home'), path: '/' },
+    { name: t('nav.team'), path: '/takim' },
+    { name: t('nav.vehicles'), path: '/araclar' },
+    { name: t('nav.achievements'), path: '/basarilar' }
   ];
 
   const resources = [
-    { name: 'Blog', path: '/blog' },
-    { name: 'Galeri', path: '/galeri' },
-    { name: 'Sponsorlar', path: '/sponsorlar' },
-    { name: 'İletişim', path: '/iletisim' }
+    { name: t('nav.blog'), path: '/blog' },
+    { name: t('nav.sponsors'), path: '/sponsorlar' },
+    { name: t('nav.contact'), path: '/iletisim' },
+    { name: t('nav.join_us'), path: '/join-us' }
   ];
 
   return (
@@ -26,20 +28,19 @@ const Footer = () => {
           {/* About Section */}
           <div className="col-span-2">
             <Link to="/" className="text-2xl font-bold text-white mb-4 block">
-              İTÜNOM UAV TEAM
+              {t('footer.teamName')}
             </Link>
             <p className="text-gray-400 mb-4">
-              Istanbul Technical University Unmanned Aerial Vehicles Team
+              {t('footer.teamDesc')}
             </p>
             <p className="text-gray-400 text-sm">
-              2014 yılından beri insansız hava araçları teknolojileri üzerine 
-              çalışan öğrenci topluluğu.
+              {t('footer.about')}
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Hızlı Erişim</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               {quickLinks.map((link, index) => (
                 <li key={index}>
@@ -56,7 +57,7 @@ const Footer = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Kaynaklar</h3>
+            <h3 className="text-white font-semibold mb-4">{t('footer.resources')}</h3>
             <ul className="space-y-2">
               {resources.map((link, index) => (
                 <li key={index}>
@@ -76,28 +77,18 @@ const Footer = () => {
         <div className="border-t border-gray-800 pt-8 mb-8">
           <div className="grid md:grid-cols-3 gap-6 text-sm">
             <div>
-              <h4 className="text-white font-semibold mb-2">Email</h4>
+              <h4 className="text-white font-semibold mb-2">{t('footer.email')}</h4>
               <a 
-                href="mailto:iha@itu.edu.tr" 
+                href="mailto:itunomuavteam@itu.edu.tr" 
                 className="text-gray-400 hover:text-red-500 transition-colors"
               >
-                iha@itu.edu.tr
+                itunomuavteam@itu.edu.tr
               </a>
             </div>
             <div>
-              <h4 className="text-white font-semibold mb-2">Telefon</h4>
-              <a 
-                href="tel:+902122931300" 
-                className="text-gray-400 hover:text-red-500 transition-colors"
-              >
-                +90 (212) 293 13 00
-              </a>
-            </div>
-            <div>
-              <h4 className="text-white font-semibold mb-2">Adres</h4>
-              <p className="text-gray-400">
-                İTÜ Ayazağa Kampüsü<br />
-                34469 Maslak, İstanbul
+              <h4 className="text-white font-semibold mb-2">{t('footer.address')}</h4>
+              <p className="text-gray-400 whitespace-pre-line">
+                {t('footer.addressText')}
               </p>
             </div>
           </div>
@@ -106,38 +97,45 @@ const Footer = () => {
         {/* Social Media and Copyright */}
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm mb-4 md:mb-0">
-            © {currentYear} İTÜNOM UAV Team. Tüm hakları saklıdır.
+            {t('footer.copyright', { year: currentYear })}
           </p>
 
-          <div className="flex space-x-4">
-            <a
-              href="#"
-              className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
-              title="Instagram"
-            >
-              <Instagram size={20} />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
-              title="LinkedIn"
-            >
-              <Linkedin size={20} />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
-              title="YouTube"
-            >
-              <Youtube size={20} />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
-              title="GitHub"
-            >
-              <Github size={20} />
-            </a>
+          <div className="flex items-center space-x-6">
+            {/* Social Media Icons */}
+            <div className="flex space-x-4">
+              <a
+                href="#"
+                className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
+                title="Instagram"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
+                title="LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
+                title="YouTube"
+              >
+                <Youtube size={20} />
+              </a>
+              <a
+                href="#"
+                className="p-2 bg-gray-800 hover:bg-red-600 text-white rounded-lg transition-colors"
+                title="GitHub"
+              >
+                <Github size={20} />
+              </a>
+            </div>
+
+            {/* Language Switcher - TR / EN */}
+            <div className="hidden lg:flex items-center space-x-3">
+            </div>
           </div>
         </div>
       </div>
